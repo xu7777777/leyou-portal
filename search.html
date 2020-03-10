@@ -499,17 +499,17 @@
             loadData(){
                 // ly.http.post("/search/page", ly.stringify(this.search)).then(resp=>{
                 ly.http.post("/search/page", this.search).then(
-                    // ({data}) => {
-                    //   //初始化结果集
-                    //   this.goodsList = data.items;
-                    //   this.goodsList.forEach(goods => {
-                    //       //把json对象转化为对象
-                    //       goods.skus = JSON.parse(goods.skus);
-                    //       //添加默认选中项
-                    //         goods.selected = goods[0];
-                    //   });
-                    // }
-                    console.log(data);
+                    ({data}) => {
+                      //初始化结果集
+                      this.goodsList = data.items;
+                      this.goodsList.forEach(goods => {
+                          //把json对象转化为对象
+                          goods.skus = JSON.parse(goods.skus);
+                          //添加默认选中项
+                            goods.selected = goods[0];
+                      });
+                    }
+                    // console.log(data);
                 );
             }
         },

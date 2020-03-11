@@ -70,7 +70,7 @@ const lyTop = {
         </div>\
        </div> \
       ",
-    name:'ly-top',
+    name: 'ly-top',
     data() {
         return {
             key: "",
@@ -94,7 +94,7 @@ const lyTop = {
         this.key = this.getUrlParam("key");
     },
     components: {
-        shortcut:() => import('./shortcut.js')
+        shortcut: () => import('./shortcut.js')
     }
 }
 export default lyTop;

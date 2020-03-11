@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8"/>
@@ -199,8 +199,9 @@
                             <li class="yui3-u-1-5" v-for="(goods,index) in goodsList" :key="index">
                                 <div class="list-wrap">
                                     <div class="p-img">
-                                        <a href="item.html" target="_blank"><img :src="goods.selected.image"
-                                                                                 height="200"/></a>
+                                        <a :href="'item/'+goods.id+'.html'" target="_blank"><img
+                                                :src="goods.selected.image"
+                                                height="200"/></a>
                                         <!--多sku图片列表-->
                                         <ul class="skus">
                                             <li :class="{selected: sku.id == goods.selected.id}"
@@ -484,7 +485,7 @@
                     }
                     return v;
                 },
-                removeFilter(k){
+                removeFilter(k) {
                     this.search.filter[k] = null;
                 },
                 selectFilter(k, o) {

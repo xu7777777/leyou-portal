@@ -77,7 +77,7 @@
                 </div>
                 <div class="control-group">
                     <label class="control-label">短信验证码：</label>
-                    <div class="controls">
+                    <div class="controls" style="cursor: pointer;">
                         <input type="text" placeholder="短信验证码" class="input-xfat input-xlarge" style="width: 120px;"
                                v-model="user.code" name="code" v-validate="'required'" data-vv-as="验证码">
                         <span class="code-span" @click="createVerifyCode">
@@ -186,7 +186,7 @@
             createVerifyCode() {// 生成短信验证码
                 this.$validator.validate("phone").then(r => {
                     if (r) {
-                        leyou.http.post("/user/send", "phone=" + this.user.phone);
+                        leyou.http.post("/user/code", "phone=" + this.user.phone);
                     }
                 });
 

@@ -523,6 +523,9 @@ const ly = leyou = {
      * @param name
      * @returns {*}
      */
+    verifyUser(){
+        return this.http.get("/auth/verify");
+    },
     getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);

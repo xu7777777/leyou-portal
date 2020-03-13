@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1f1f67-be42-46ff-8682-2571e647d25a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/qrcode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/qrcode.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/pages-getOrderInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/pages-getOrderInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getOrderInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/getOrderInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,28 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="525" column="4" selection-start-line="525" selection-start-column="4" selection-end-line="525" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vue/vuetify.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7565">
-              <caret line="445" selection-start-line="445" selection-end-line="445" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="295" column="117" selection-start-line="295" selection-start-column="117" selection-end-line="295" selection-end-column="117" />
+            <state relative-caret-position="-50">
+              <caret line="328" column="44" lean-forward="true" selection-start-line="328" selection-start-column="44" selection-end-line="328" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -47,14 +32,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vue/vue.js">
+        <entry file="file://$PROJECT_DIR$/getOrderInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="849" column="21" selection-start-line="849" selection-start-column="21" selection-end-line="849" selection-end-column="21" />
+            <state relative-caret-position="1864">
+              <caret line="298" column="40" lean-forward="true" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/pages-getOrderInfo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -62,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/item.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6720">
-              <caret line="275" column="29" lean-forward="true" selection-start-line="275" selection-start-column="29" selection-end-line="275" selection-end-column="29" />
+            <state relative-caret-position="3874">
+              <caret line="294" column="40" selection-start-line="294" selection-start-column="40" selection-end-line="294" selection-end-column="40" />
               <folding>
                 <element signature="e#3208#3212#1" expanded="true" />
                 <element signature="e#4182#4186#1" expanded="true" />
@@ -80,20 +73,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="108" column="10" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
+            <state relative-caret-position="-1137">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pay.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seckill-index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/js/czFunction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -101,8 +102,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>127.0.0.1</find>
-      <find>ly</find>
-      <find>formatP</find>
       <find>type-list</find>
       <find>defau</find>
       <find>breads</find>
@@ -114,6 +113,19 @@
       <find>http://127.0.0.1</find>
       <find>btn-choose</find>
       <find>leyou</find>
+      <find>sum</find>
+      <find>payType</find>
+      <find>sumb</find>
+      <find>sui</find>
+      <find>fl code</find>
+      <find>formatP</find>
+      <find>total</find>
+      <find>totla</find>
+      <find>formatPrice</find>
+      <find>ly</find>
+      <find>qrI</find>
+      <find>shortcut</find>
+      <find>qrImage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,7 +147,12 @@
         <option value="$PROJECT_DIR$/js/vue/vue.js" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/item.html" />
+        <option value="$PROJECT_DIR$/js/widget/qrcode.min.js" />
+        <option value="$PROJECT_DIR$/css/pages-getOrderInfo.css" />
+        <option value="$PROJECT_DIR$/js/qrcode.min.js" />
         <option value="$PROJECT_DIR$/cart.html" />
+        <option value="$PROJECT_DIR$/getOrderInfo.html" />
+        <option value="$PROJECT_DIR$/pay.html" />
       </list>
     </option>
   </component>
@@ -163,8 +180,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="47" />
     <option name="y" value="23" />
-    <option name="width" value="1393" />
-    <option name="height" value="877" />
+    <option name="width" value="1606" />
+    <option name="height" value="1006" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,7 +200,18 @@
             <path>
               <item name="leyou-portal" type="b2602c69:ProjectViewProjectNode" />
               <item name="leyou-portal" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leyou-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leyou-portal" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leyou-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leyou-portal" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="leyou-portal" type="b2602c69:ProjectViewProjectNode" />
@@ -204,12 +232,18 @@
               <item name="vue" type="462c0819:PsiDirectoryNode" />
               <item name="vue.js" type="620a8d5e:NestingTreeNode" />
             </path>
+            <path>
+              <item name="leyou-portal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leyou-portal" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="CatdeaLogs" />
     </panes>
   </component>
@@ -217,11 +251,20 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584025658858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584085693044" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/widget" />
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -258,18 +301,18 @@
       <workItem from="1583885868774" duration="17569000" />
       <workItem from="1583925998054" duration="1320000" />
       <workItem from="1583973402106" duration="5393000" />
-      <workItem from="1584006217593" duration="10446000" />
+      <workItem from="1584006217593" duration="10600000" />
+      <workItem from="1584059558670" duration="18686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58835000" />
+    <option name="totallyTimeSpent" value="77675000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="23" width="1393" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="47" y="23" width="1606" height="1006" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1761658" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15409207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -286,7 +329,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32356688" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27789935" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Run with VisualVM" order="11" />
       <window_info anchor="bottom" id="JProfiler" order="12" />
@@ -439,22 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vue/vuetify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7565">
-          <caret line="445" selection-start-line="445" selection-end-line="445" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leyou-portal.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/validate.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/czFunction.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/qs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -462,34 +489,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vue/vue.js">
+    <entry file="file://$PROJECT_DIR$/js/vue/vuetify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="849" column="21" selection-start-line="849" selection-start-column="21" selection-end-line="849" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="7565">
+          <caret line="445" selection-start-line="445" selection-end-line="445" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
+    <entry file="file://$PROJECT_DIR$/js/widget/qrcode.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="108" column="10" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
+        <state relative-caret-position="127">
+          <caret line="444" column="48" lean-forward="true" selection-start-line="444" selection-start-column="48" selection-end-line="444" selection-end-column="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leyou-portal.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payfail.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/seckill-index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pay.html">
+    <entry file="file://$PROJECT_DIR$/js/vue/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="849" column="21" selection-start-line="849" selection-start-column="21" selection-end-line="849" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="519" column="6" selection-start-line="519" selection-start-column="6" selection-end-line="519" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pages/shortcut.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/pages-getOrderInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="328" column="44" lean-forward="true" selection-start-line="328" selection-start-column="44" selection-end-line="328" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getOrderInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1864">
+          <caret line="298" column="40" lean-forward="true" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/validate.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/qrcode.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/czFunction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/qrcode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6359">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6720">
-          <caret line="275" column="29" lean-forward="true" selection-start-line="275" selection-start-column="29" selection-end-line="275" selection-end-column="29" />
+        <state relative-caret-position="3874">
+          <caret line="294" column="40" selection-start-line="294" selection-start-column="40" selection-end-line="294" selection-end-column="40" />
           <folding>
             <element signature="e#3208#3212#1" expanded="true" />
             <element signature="e#4182#4186#1" expanded="true" />
@@ -502,20 +602,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
+    <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="525" column="4" selection-start-line="525" selection-start-column="4" selection-end-line="525" selection-end-column="4" />
+        <state relative-caret-position="-1137">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cart.html">
+    <entry file="file://$PROJECT_DIR$/pay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="295" column="117" selection-start-line="295" selection-start-column="117" selection-end-line="295" selection-end-column="117" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
         </state>
       </provider>
     </entry>

@@ -6,7 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 	<title>乐优商城--结算页</title>
-
     <link rel="stylesheet" type="text/css" href="css/webbase.css" />
     <link rel="stylesheet" type="text/css" href="css/pages-getOrderInfo.css" />
 </head>
@@ -116,8 +115,8 @@
 					</div>
 					<div class="step-cont">
 						<ul class="payType">
-							<li class="" >微信付款<span title="点击取消选择"></span></li>
-							<li class="selected">货到付款<span title="点击取消选择"></span></li>
+							<li :class="{selected: order.paymentType == 1}" @click="order.paymentType=1">微信付款<span title="点击取消选择"></span></li>
+							<li :class="{selected: order.paymentType == 2}" @click="order.paymentType=2">货到付款<span title="点击取消选择"></span></li>
 						</ul>
 					</div>
 					<div class="hr"></div>
@@ -126,21 +125,23 @@
 					</div>
 					<div class="step-cont">
 						<ul class="send-detail">
-							<li >
+							<li v-for="(cart,index) in carts" :key="index">
 								<div class="sendGoods">
 									<ul class="yui3-g">
 										<li class="yui3-u-1-6">
-											<span><img width="70px" height="70px" src="img/goods.png"/></span>
+											<span><img width="70px" height="70px" :src="cart.image"/></span>
 										</li>
 										<li class="yui3-u-7-12">
-											<div class="desc">macbook air 2017新款，带bar 顺畅装逼体验</div>
-											<div class="seven">7天无理由退货</div>
+											<div class="desc">{{cart.title}}</div>
+											<div class="seven">
+												<span v-for="(v) in JSON.parse(cart.ownSpec)">{{v + "  "}} </span>
+											</div>
 										</li>
 										<li class="yui3-u-1-12">
-											<div class="price">￥8848.00</div>
+											<div class="price">￥{{ly.formatPrice(cart.price * cart.num)}}</div>
 										</li>
 										<li class="yui3-u-1-12">
-											<div class="num">X1</div>
+											<div class="num">{{cart.num}}</div>
 										</li>
 										<li class="yui3-u-1-12">
 											<div class="exit">有货</div>
@@ -172,28 +173,28 @@
 		<div class="order-summary">
 			<div class="static fr">
 				<div class="list">
-					<span><i class="number">1</i>件商品，总商品金额</span>
-					<em class="allprice">¥8848.00</em>
+					<span><i class="number">{{totalNum}}</i>件商品，总商品金额</span>
+					<em class="allprice">¥{{ly.formatPrice(totalPay)}}</em>
 				</div>
 				<div class="list">
 					<span>返现：</span>
-					<em class="money">0.00</em>
+					<em class="money">{{ly.formatPrice(order.discount)}}</em>
 				</div>
 				<div class="list">
 					<span>运费：</span>
-					<em class="transport">0.00</em>
+					<em class="transport">{{ly.formatPrice(order.postFee)}}</em>
 				</div>
 			</div>
 		</div>
 		<div class="clearfix trade">
-			<div class="fc-price">应付金额:　<span class="price">¥8848</span></div>
+			<div class="fc-price">应付金额:　<span class="price" style="font-size: 24px">¥{{ly.formatPrice(order.actualPay)}}</span></div>
 			<div class="fc-receiverInfo">
 				寄送至:{{addresses[selectedAddress].address}}
 				收货人：{{addresses[selectedAddress].name}} {{addresses[selectedAddress].phone}}
 			</div>
 		</div>
 		<div class="submit">
-			<a class="sui-btn btn-danger btn-xlarge" href="pay.html">提交订单</a>
+			<a class="sui-btn btn-danger btn-xlarge" @click.prevent="submit" href="pay.html">提交订单</a>
 		</div>
 	</div>
 
@@ -201,10 +202,12 @@
 	<script src="./js/vue/vue.js"></script>
 	<script src="./js/axios.min.js"></script>
 	<script src="./js/common.js"></script>
+
 	<script type="text/javascript">
         var orderInfoVm = new Vue({
             el:"#orderInfoApp",
             data:{
+                ly,
                 addresses:[// 可选地址列表,假数据，需要从后台查询
 					{
 					    name:"锋哥",// 收件人姓名
@@ -228,11 +231,77 @@
                     }
 				],
 				selectedAddress: 0,
+				order: {
+                    paymentType: 1, //付款方式，默认为1： 微信支付
+					postFee: 0, //邮费
+					discount: 0, //优惠
+					actualPay: 0
+				},
+				carts: []
 
             },
+			created() {
+            	ly.verifyUser().then(resp => {
+					//已经登陆，获取下单购物车中的信息
+					this.carts = ly.store.get("selectedCarts") || [];
+					this.order.actualPay = this.actualPay;
+				}).catch(() => {
+				    //为登陆，重新定向到登陆界面
+					window.location = "/login.html?returnUrl=" + window.location.href;
+				});
+			},
 			components:{
                 shortcut: () => import("/js/pages/shortcut.js")
-			}
+			},
+            computed: {
+                totalNum(){
+                    return this.carts.reduce((c1, c2) => c1 + c2.num, 0)
+                },
+                totalPay(){
+                    return this.carts.reduce((c1, c2) => c1 + c2.price * c2.num, 0);
+                },
+                actualPay(){
+                    return this.totalPay + this.order.postFee - this.order.discount;
+                }
+            },
+            methods: {
+                submit() {
+                    // 把购物车数据处理成订单详情
+                    const orderDetails = this.carts.map(({userId, ...rest}) => rest);
+                    // 处理物流信息
+                    const addr = this.addresses[this.selectedAddress];
+                    const obj = {
+                        receiver: addr.name,
+                        receiverState: addr.state,
+                        receiverCity: addr.city,
+                        receiverAddress: addr.address,
+                        receiverDistrict: addr.district,
+                        receiverMobile: addr.phone,
+                        receiverZip: addr.zipCode
+                    };
+                    // 复制到订单对象
+                    Object.assign(this.order, obj, {
+                        orderDetails,
+                        totalPay: this.totalPay,
+                        actualPay: this.actualPay,
+                    });
+                    // 提交订单
+                    ly.http.post("/order/order", this.order,
+                        {
+                            transformResponse: [
+                                function(data){
+                                    return data;
+                                }
+                            ]
+                        }).then(({data}) => {
+                        // 在线支付，需要到付款页
+                        window.location = "pay.html?orderId=" + data;
+                    }).catch((resp) => {
+                        console.log("订单提交失败，可能是缺货!")
+                        // alert("订单提交失败，可能是缺货!");
+                    })
+                }
+            },
         });
 	</script>
 
